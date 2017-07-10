@@ -4,19 +4,21 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 public class TestWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
-	public TestWebAppInitializer() {
-		// TODO Auto-generated constructor stub
-	}
-
+	/**
+	 * 其他spring配置
+	 * web.xml ContextLoaderListener 配置相关
+	 */
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		// TODO Auto-generated method stub
-		return new Class<?>[] {};
+		return new Class<?>[] { RootConfig.class };
 	}
 
+	/**
+	 * WebMvc相关配置 
+	 * web.xml DispatcherServlet 配置相关
+	 */
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		// TODO Auto-generated method stub
 		return new Class<?>[] { WebConfig.class };
 	}
 
