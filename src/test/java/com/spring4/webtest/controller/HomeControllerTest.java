@@ -18,14 +18,15 @@ import com.spring4.webtest.config.WebAppInitializer;
 import com.spring4.webtest.controller.HomeController;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-//@ContextConfiguration(classes = {WebAppInitializer.class})
+@ContextConfiguration(classes = {WebAppInitializer.class})
 @WebAppConfiguration
 public class HomeControllerTest {
 	
 /*	@Resource
 	private HomeController home;*/
 	
-//	@Autowired
+/*	@Autowired
+	private HomeController home;*/
 	
 	@Test
 	public void testHome() throws Exception{
