@@ -13,11 +13,11 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.spring4.webtest.config.TestWebAppInitializer;
+import com.spring4.webtest.config.WebAppInitializer;
 import com.spring4.webtest.controller.HomeController;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {TestWebAppInitializer.class})
+@ContextConfiguration(classes = {WebAppInitializer.class})
 @WebAppConfiguration
 public class HomeControllerTest {
 	
