@@ -1,5 +1,6 @@
 package com.spring4.webtest.config;
 
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
@@ -10,4 +11,9 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 //@Configuration @EnableWebSecurity已经继承了Configuration
 @EnableWebSecurity
 public class SecurityConfigurer extends WebSecurityConfigurerAdapter {
+	@Override
+	public void configure(WebSecurity web) throws Exception {
+//		web.ignoring().antMatchers("/", "/index", "/home");
+		web.ignoring().antMatchers("/", "/index");
+	}
 }
