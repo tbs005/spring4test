@@ -5,7 +5,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 /**
  * Web 安全权限相关配置
- *
+ * 参考官方文档：http://docs.spring.io/spring-security/site/docs/4.2.3.RELEASE/guides/html5/
  */
 //@Configuration @EnableWebSecurity已经继承了Configuration
 @EnableWebSecurity
