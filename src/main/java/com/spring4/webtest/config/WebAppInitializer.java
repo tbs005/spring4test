@@ -1,5 +1,8 @@
 package com.spring4.webtest.config;
 
+import javax.servlet.MultipartConfigElement;
+import javax.servlet.ServletRegistration.Dynamic;
+
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
@@ -27,4 +30,11 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 		return new String [] {"/"};
 	}
 
+	/**
+	 * 文件上传相关配置
+	 */
+	@Override
+	protected void customizeRegistration(Dynamic registration) {
+		registration.setMultipartConfig(new MultipartConfigElement("/tmp/uploads"));
+	}
 }
