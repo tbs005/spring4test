@@ -44,6 +44,11 @@
 			<artifactId>spring-security-web</artifactId>
 			<version>${springframework.security.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${springframework.security.version}</version>
+		</dependency>
 		
 		<!-- jsr303 validation dependencies-->
         <dependency>
