@@ -1,5 +1,6 @@
 package com.spring4.webtest.config;
 
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -31,6 +32,8 @@ public class SecurityConfigurer extends WebSecurityConfigurerAdapter {
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		super.configure(http);
+		http.authorizeRequests()
+		.antMatchers(HttpMethod.POST,"/").authenticated()
+		.anyRequest().permitAll();
 	}
 }
