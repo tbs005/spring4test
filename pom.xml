@@ -15,6 +15,7 @@
 		<hibernate.validator.version>5.1.2.Final</hibernate.validator.version>
         <javax.validation.version>1.1.0.Final</javax.validation.version>
         <springframework.security.version>4.2.3.RELEASE</springframework.security.version>
+        <h2Version>1.4.182</h2Version>
 	</properties>
 
 	<dependencies>
@@ -60,6 +61,11 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
             <version>${hibernate.validator.version}</version>
+        </dependency>
+        <dependency>
+        	<groupId>com.h2database</groupId>
+        	<artifactId>h2</artifactId>
+        	<version>${h2Version}</version>
         </dependency>
         
         <!-- Servlet dependencies -->
