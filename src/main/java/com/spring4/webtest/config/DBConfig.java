@@ -1,9 +1,12 @@
 package com.spring4.webtest.config;
 
-import org.apache.commons.dbcp.BasicDataSource;
+import javax.sql.DataSource;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
+import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 
 /**
  * 数据源配置
@@ -19,15 +22,21 @@ import org.springframework.context.annotation.Configuration;
 public class DBConfig {
 
 	@Bean
-	public BasicDataSource dataSource(){
-		BasicDataSource ds = new BasicDataSource();
+	public DataSource dataSource(){
+/*		BasicDataSource ds = new BasicDataSource();
 		ds.setDriverClassName("org.h2.Driver");
 		ds.setUrl("jdbc:h2:tcp://localhost/~/webtest");
 		ds.setUsername("sa");
 		ds.setPassword("");
 		ds.setInitialSize(5);
 		ds.setMaxActive(10);
-		return ds;
+		return ds;*/
+		
+		return new EmbeddedDatabaseBuilder()
+				.setType(EmbeddedDatabaseType.H2)
+				.addScript("classpath:schema.sql")
+				.addScript("classpath:test-data.sql")
+				.build();
 	} 
 
 }

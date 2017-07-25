@@ -50,6 +50,11 @@
 			<artifactId>spring-security-config</artifactId>
 			<version>${springframework.security.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${springframework.security.version}</version>
+		</dependency>
 
 		<!-- jsr303 validation dependencies -->
 		<dependency>
