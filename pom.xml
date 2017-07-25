@@ -13,9 +13,9 @@
 		<java.compiler.version>1.8</java.compiler.version>
 		<springframework.version>4.2.5.RELEASE</springframework.version>
 		<hibernate.validator.version>5.1.2.Final</hibernate.validator.version>
-        <javax.validation.version>1.1.0.Final</javax.validation.version>
-        <springframework.security.version>4.2.3.RELEASE</springframework.security.version>
-        <h2Version>1.4.182</h2Version>
+		<javax.validation.version>1.1.0.Final</javax.validation.version>
+		<springframework.security.version>4.2.3.RELEASE</springframework.security.version>
+		<h2Version>1.4.182</h2Version>
 	</properties>
 
 	<dependencies>
@@ -50,47 +50,48 @@
 			<artifactId>spring-security-config</artifactId>
 			<version>${springframework.security.version}</version>
 		</dependency>
-		
-		<!-- jsr303 validation dependencies-->
-        <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>validation-api</artifactId>
-            <version>${javax.validation.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-validator</artifactId>
-            <version>${hibernate.validator.version}</version>
-        </dependency>
-        <dependency>
-        	<groupId>com.h2database</groupId>
-        	<artifactId>h2</artifactId>
-        	<version>${h2Version}</version>
-        </dependency>
-        
-        <!-- Servlet dependencies -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet.jsp</groupId>
-            <artifactId>javax.servlet.jsp-api</artifactId>
-            <version>2.3.1</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.2</version>
-        </dependency>
-        
-<!-- 		<dependency>
-			<groupId>javax</groupId>
-			<artifactId>javaee-api</artifactId>
-			<version>7.0</version>
-			<scope>provided</scope>
-		</dependency> -->
+
+		<!-- jsr303 validation dependencies -->
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>${javax.validation.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${hibernate.validator.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${h2Version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
+
+		<!-- Servlet dependencies -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>javax.servlet.jsp-api</artifactId>
+			<version>2.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+		<!-- <dependency> <groupId>javax</groupId> <artifactId>javaee-api</artifactId> 
+			<version>7.0</version> <scope>provided</scope> </dependency> -->
 
 		<dependency>
 			<groupId>junit</groupId>
