@@ -35,7 +35,7 @@ public class DBConfig {
 	private Environment environment;*/
 	
 	@Bean
-	public JpaTransactionManager jpaTransactionManager(){
+	public JpaTransactionManager transactionManager(){
 		JpaTransactionManager jtManager = new JpaTransactionManager(entityManagerFactoryBean().getObject());
 		return jtManager;
 	}
