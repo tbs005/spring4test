@@ -49,7 +49,7 @@ public class DBConfig {
 		entityManagerFactoryBean.setDataSource(dataSource());
 		entityManagerFactoryBean.setPackagesToScan(new String [] {"com.spring4.webtest.domain"});
 		entityManagerFactoryBean.setJpaVendorAdapter(jpaVendorAdapter());
-		entityManagerFactoryBean.setJpaProperties(jpaProperties());
+//		entityManagerFactoryBean.setJpaProperties(jpaProperties());
 		return entityManagerFactoryBean; 
 	}
 	
